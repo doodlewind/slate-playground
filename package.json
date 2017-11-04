@@ -1,0 +1,24 @@
+{
+  "name": "slate-playground",
+  "version": "0.1.0",
+  "description": "a pluggable editor",
+  "main": "src/components/index.js",
+  "scripts": {
+    "storybook": "start-storybook -p 9001 -c .storybook"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "keywords": ["slate", "editor", "react"],
+  "author": "doodlewind",
+  "devDependencies": {
+    "@storybook/react": "^3.2.14"
+  },
+  "peerDependencies": {
+    "immutable": "^3.8.2",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "slate": "0.30.6",
+    "slate-react": "0.10.11"
+  }
+}
