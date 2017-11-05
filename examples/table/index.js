@@ -1,15 +1,44 @@
-import Plain from 'slate-plain-serializer'
+import { Value } from 'slate'
 import { Editor } from 'slate-react'
 
 import React from 'react'
+import initialValue from './value.json'
+import './style.css'
+
+import TableComponents from '../../src/components'
+const {
+  Table, TableRow, TableCell
+} = TableComponents
 
 class TableEditor extends React.Component {
   state = {
-    value: Plain.deserialize('Table editor todo...')
+    value: Value.fromJSON(initialValue)
   }
 
   onChange = ({ value }) => {
     this.setState({ value })
+  }
+
+  renderNode = (props) => {
+    const { attributes, children, node } = props
+    switch (node.type) {
+      case 'table': return (
+        <Table attributes>{children}</Table>
+      )
+      case 'table-row': return (
+        <TableRow {...attributes}>{children}</TableRow>
+      )
+      case 'table-cell': return (
+        <TableCell {...attributes}>{children}</TableCell>
+      )
+    }
+  }
+
+  renderMark = (props) => {
+    const { children, mark } = props
+    switch (mark.type) {
+      case 'bold': return <strong>{children}</strong>
+    }
   }
 
   render () {
@@ -18,6 +47,8 @@ class TableEditor extends React.Component {
         <Editor
           value={this.state.value}
           onChange={this.onChange}
+          renderNode={this.renderNode}
+          renderMark={this.renderMark}
         />
       </div>
     )
