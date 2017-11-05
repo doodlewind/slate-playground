@@ -23,13 +23,13 @@ class TableEditor extends React.Component {
     const { attributes, children, node } = props
     switch (node.type) {
       case 'table': return (
-        <Table attributes>{children}</Table>
+        <Table attributes={attributes}>{children}</Table>
       )
       case 'table-row': return (
-        <TableRow {...attributes}>{children}</TableRow>
+        <TableRow attributes={attributes}>{children}</TableRow>
       )
       case 'table-cell': return (
-        <TableCell {...attributes}>{children}</TableCell>
+        <TableCell attributes={attributes}>{children}</TableCell>
       )
     }
   }
