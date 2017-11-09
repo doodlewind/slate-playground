@@ -21,11 +21,11 @@
         "nodes": [
           {
             "kind": "block",
-            "type": "table-row",
+            "type": "table_row",
             "nodes": [
               {
                 "kind": "block",
-                "type": "table-cell",
+                "type": "table_cell",
                 "nodes": [
                   {
                     "kind": "text",
@@ -39,7 +39,7 @@
               },
               {
                 "kind": "block",
-                "type": "table-cell",
+                "type": "table_cell",
                 "nodes": [
                   {
                     "kind": "text",
@@ -58,7 +58,7 @@
               },
               {
                 "kind": "block",
-                "type": "table-cell",
+                "type": "table_cell",
                 "nodes": [
                   {
                     "kind": "text",
@@ -77,7 +77,7 @@
               },
               {
                 "kind": "block",
-                "type": "table-cell",
+                "type": "table_cell",
                 "nodes": [
                   {
                     "kind": "text",
@@ -98,11 +98,11 @@
           },
           {
             "kind": "block",
-            "type": "table-row",
+            "type": "table_row",
             "nodes": [
               {
                 "kind": "block",
-                "type": "table-cell",
+                "type": "table_cell",
                 "nodes": [
                   {
                     "kind": "text",
@@ -121,7 +121,7 @@
               },
               {
                 "kind": "block",
-                "type": "table-cell",
+                "type": "table_cell",
                 "nodes": [
                   {
                     "kind": "text",
@@ -135,7 +135,7 @@
               },
               {
                 "kind": "block",
-                "type": "table-cell",
+                "type": "table_cell",
                 "nodes": [
                   {
                     "kind": "text",
@@ -149,7 +149,7 @@
               },
               {
                 "kind": "block",
-                "type": "table-cell",
+                "type": "table_cell",
                 "nodes": [
                   {
                     "kind": "text",
@@ -165,11 +165,11 @@
           },
           {
             "kind": "block",
-            "type": "table-row",
+            "type": "table_row",
             "nodes": [
               {
                 "kind": "block",
-                "type": "table-cell",
+                "type": "table_cell",
                 "nodes": [
                   {
                     "kind": "text",
@@ -188,7 +188,7 @@
               },
               {
                 "kind": "block",
-                "type": "table-cell",
+                "type": "table_cell",
                 "nodes": [
                   {
                     "kind": "text",
@@ -202,7 +202,7 @@
               },
               {
                 "kind": "block",
-                "type": "table-cell",
+                "type": "table_cell",
                 "nodes": [
                   {
                     "kind": "text",
@@ -216,7 +216,7 @@
               },
               {
                 "kind": "block",
-                "type": "table-cell",
+                "type": "table_cell",
                 "nodes": [
                   {
                     "kind": "text",

@@ -3,12 +3,13 @@ import { Editor } from 'slate-react'
 
 import React from 'react'
 import initialValue from './value.json'
+
+import RichTable from '../../lib'
 import './style.css'
 
-import TableComponents from '../../src/components'
-const {
-  Table, TableRow, TableCell
-} = TableComponents
+const richTable = RichTable()
+const { Table, TableRow, TableCell } = richTable.components
+const { addRow } = richTable.changes
 
 class TableEditor extends React.Component {
   state = {
@@ -25,10 +26,10 @@ class TableEditor extends React.Component {
       case 'table': return (
         <Table {...props} />
       )
-      case 'table-row': return (
+      case 'table_row': return (
         <TableRow {...props} />
       )
-      case 'table-cell': return (
+      case 'table_cell': return (
         <TableCell {...props} />
       )
     }
@@ -41,9 +42,28 @@ class TableEditor extends React.Component {
     }
   }
 
+  onAddRow = (e) => {
+    e.preventDefault()
+    const change = this.state.value.change()
+    addRow(change)
+    this.onChange(change)
+  }
+
+  onRemoveRow = (e) => {
+    e.preventDefault()
+  }
+
   render () {
     return (
       <div className='editor'>
+        <div>
+          <button onMouseDown={this.onAddRow}>
+            add row
+          </button>
+          <button onMouseDown={this.onRemoveRow}>
+            remove row
+          </button>
+        </div>
         <Editor
           value={this.state.value}
           onChange={this.onChange}
