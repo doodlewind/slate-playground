@@ -8,8 +8,9 @@ import RichTable from '../../lib'
 import './style.css'
 
 const richTable = RichTable()
+
 const { Table, TableRow, TableCell } = richTable.components
-const { addRow } = richTable.changes
+const { insertRow } = richTable.changes
 
 class TableEditor extends React.Component {
   state = {
@@ -42,10 +43,10 @@ class TableEditor extends React.Component {
     }
   }
 
-  onAddRow = (e) => {
+  onInsertRow = (e) => {
     e.preventDefault()
     const change = this.state.value.change()
-    addRow(change)
+    insertRow(change)
     this.onChange(change)
   }
 
@@ -57,7 +58,7 @@ class TableEditor extends React.Component {
     return (
       <div className='editor'>
         <div>
-          <button onMouseDown={this.onAddRow}>
+          <button onMouseDown={this.onInsertRow}>
             add row
           </button>
           <button onMouseDown={this.onRemoveRow}>
