@@ -9,14 +9,20 @@
   "standard": {
     "parser": "babel-eslint"
   },
-  "keywords": ["slate", "editor", "react"],
+  "keywords": [
+    "slate",
+    "editor",
+    "react"
+  ],
   "author": "doodlewind",
   "devDependencies": {
     "@storybook/react": "^3.2.14"
   },
-  "peerDependencies": {
+  "dependencies": {
     "immutable": "^3.8.2",
+    "prop-types": "^15.6.0",
     "react": "^16.0.0",
+    "react-broadcast": "^0.5.2",
     "react-dom": "^16.0.0",
     "slate": "0.30.6",
     "slate-react": "0.10.11"

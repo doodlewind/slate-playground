@@ -68,6 +68,7 @@ class TableEditor extends React.Component {
         <Editor
           value={this.state.value}
           onChange={this.onChange}
+          richTable={richTable}
           renderNode={this.renderNode}
           renderMark={this.renderMark}
         />
