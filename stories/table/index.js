@@ -2,8 +2,8 @@ import { Value } from 'slate'
 import { Editor } from 'slate-react'
 
 import React from 'react'
-import initialValue from './value.json'
 
+import initialValue from './value'
 import RichTable from '../../lib'
 import './style.css'
 
@@ -43,6 +43,7 @@ class TableEditor extends React.Component {
     }
   }
 
+  // FIXME sync react state with slate model.
   onInsertRow = (e) => {
     e.preventDefault()
     const change = this.state.value.change()

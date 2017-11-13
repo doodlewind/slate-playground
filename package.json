@@ -16,7 +16,8 @@
   ],
   "author": "doodlewind",
   "devDependencies": {
-    "@storybook/react": "^3.2.14"
+    "@storybook/react": "^3.2.14",
+    "slate-hyperscript": "^0.4.6"
   },
   "dependencies": {
     "immutable": "^3.8.2",
