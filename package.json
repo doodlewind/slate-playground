@@ -2,7 +2,7 @@
   "name": "slate-playground",
   "version": "0.1.0",
   "description": "a pluggable editor",
-  "main": "src/components/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "storybook": "start-storybook -p 9001 -c .storybook"
   },
