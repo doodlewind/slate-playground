@@ -10,7 +10,6 @@ import './style.css'
 const richTable = RichTable()
 
 const { Table, TableRow, TableCell } = richTable.components
-const { insertRow } = richTable.changes
 
 class TableEditor extends React.Component {
   state = {
@@ -47,8 +46,13 @@ class TableEditor extends React.Component {
   onInsertRow = (e) => {
     e.preventDefault()
     const change = this.state.value.change()
-    insertRow(change)
+    richTable.changes.insertRow(change)
     this.onChange(change)
+  }
+
+  onMergeCell = (e) => {
+    e.preventDefault()
+    richTable.changes.mergeCell()
   }
 
   onRemoveRow = (e) => {
@@ -64,6 +68,9 @@ class TableEditor extends React.Component {
           </button>
           <button onMouseDown={this.onRemoveRow}>
             remove row
+          </button>
+          <button onMouseDown={this.onMergeCell}>
+            merge cell
           </button>
         </div>
         <Editor
